@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'Anton';
+  src: url("../fonts/Anton-regular.woff2") format("woff2"), url("../fonts/Anton-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: 'LatoB';
+  src: url("../fonts/Lato-Black.woff2") format("woff2"), url("../fonts/Lato-Black.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.ttf") format("ttf");
+}
+
+.premiere_partie .flex .marron div, .premiere_partie .flex .vert div, .premiere_partie .flex .bleu div, .premiere_partie .flex .jaune div, header .logo_header img, .premiere_partie .premiere_image, .premiere_partie .premiere_image img, .premiere_partie .deuxieme_image, .premiere_partie .flex {
+  width: 100%;
+}
+
+.premiere_partie .flex .marron, .premiere_partie .flex .vert, .premiere_partie .flex .bleu, .premiere_partie .flex .jaune {
+  width: 40%;
+  text-align: center;
+}
+
+.premiere_partie .flex .marron div img, .premiere_partie .flex .vert div img, .premiere_partie .flex .bleu div img, .premiere_partie .flex .jaune div img {
+  width: 40%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+header .logo_header {
+  width: 50%;
+  display: inline-block;
+}
+
+header nav {
+  display: none;
+}
+
+.premiere_partie .deuxieme_image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.premiere_partie .slogan {
+  font-family: Anton;
+  font-size: 30px;
+  text-align: center;
+  color: #fcb731;
+}
+
+.premiere_partie .slogan h1 {
+  margin-bottom: 0;
+}
+
+.premiere_partie .slogan h3 {
+  margin-top: 0;
+}
+
+.premiere_partie .flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: LatoB;
+  font-size: 40px;
+}
+
+.premiere_partie .flex .marron {
+  color: #c3a575;
+}
+
+.premiere_partie .flex .vert {
+  color: #b3d143;
+}
+
+.premiere_partie .flex .bleu {
+  color: #00afec;
+}
+
+.premiere_partie .flex .jaune {
+  color: #fcb731;
+}
+
+.premiere_partie .fond_point {
+  background: repeat url("../svg/points.svg");
+  color: #6d6f71;
+  margin: 10px;
+}
+
+.premiere_partie .fond_point h3 {
+  padding-top: 20px;
+  text-align: center;
+  font-family: LatoB;
+  font-size: 40px;
+}
+
+.premiere_partie .fond_point p, .premiere_partie .fond_point ul {
+  font-family: Lato;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.premiere_partie .fond_gris {
+  background-color: #6d6f71;
+  border-radius: 25px;
+  margin-right: 15px;
+  margin-left: 15px;
+  text-align: center;
+  color: white;
+}
+
+.premiere_partie .fond_gris h3 {
+  font-family: LatoB;
+  font-size: 40px;
+  padding-top: 50px;
+}
+
+.premiere_partie .bouton_jaune {
+  font-family: LatoB;
+  background-color: #fcb731;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-radius: 25px;
+  font-size: 50px;
+}
+
+.premiere_partie .bouton_jaune img {
+  width: 20%;
+}
+
+/*# sourceMappingURL=accueil.css.map */
