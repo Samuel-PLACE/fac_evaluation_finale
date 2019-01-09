@@ -29,7 +29,7 @@ gulp.task('watch', function() {
         notify("CSS -> SCSS ==> OK").write('');
 	});
 
-  gulp.watch(['./js/a_compresser/*.js'], ['concat_minif'])
+  gulp.watch(['./js/global/*.js'], ['concat_minif'])
 	.on('change', function () {
         notify("JS (concat)  ==> OK").write('');
 	});
@@ -50,7 +50,7 @@ gulp.task('css', function () {
 		})(err);
 		this.emit('end');
 	};
-  return gulp.src('./css/scss/*.scss')
+  return gulp.src('./css/*.scss')
     .pipe(plumber({errorHandler: onError}))
 	.pipe(sourcemaps.init())
     .pipe(sass({
@@ -61,6 +61,8 @@ gulp.task('css', function () {
 	.pipe(gulp.dest('./css'));
 });
 
+
+// Concatener
 gulp.task('concat_minif', function() {
 	var onError = function(err) {
 		notify.onError({
@@ -71,13 +73,13 @@ gulp.task('concat_minif', function() {
 		})(err);
 		this.emit('end');
 	};
-	return gulp.src(['./js/a_compresser/*.js'])
+	return gulp.src(['./js/global/*.js'])
 		.pipe(plumber({errorHandler: onError}))
 		.pipe(sourcemaps.init())
 		.pipe(babel({
 			presets: ['env']
 		}))
-		.pipe(concat('*.js', {newLine: ';'}))
+		.pipe(concat('mon_site.min.js', {newLine: ';'}))
 		.pipe(uglify())
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./js'));
@@ -104,13 +106,14 @@ gulp.task('js_babel', function() {
 
 
 
-gulp.task('default', ['css', 'concat_minif']);
+gulp.task('default', ['css', 'concat_minif', 'svgsprite']);
 
 var svgSprite    = require('gulp-svg-sprite');
-var baseDir      = './svg';
-//var baseDir      = 'svgmin';
-var svgGlob      = '**/*.svg';    
-var outDir       = './img/';    
+//var plumber      = require('gulp-plumber');
+var baseDir      = './svg';   // <-- Set to your SVG base directory
+//var baseDir      = 'svgmin';   // <-- Set to your SVG base directory
+var svgGlob      = '**/*.svg';       // <-- Glob to match your SVG files
+var outDir       = './img/';     // <-- Main output directory
 var config       = {
 	"shape": {
 		"spacing": {
@@ -143,5 +146,5 @@ var svgmin = require('gulp-svgmin');
 gulp.task('svgmin', function () {
     return gulp.src('./svg/*.svg')
         .pipe(svgmin())
-        .pipe(gulp.dest('./svg/svgmin'));
+        .pipe(gulp.dest('./svgmin'));
 });
