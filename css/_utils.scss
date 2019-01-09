@@ -1,0 +1,45 @@
+$width_quarante : 40%;
+$text_align: center;
+
+%width_cent{
+  width: 100%;
+}
+
+%icone_flex{
+  width: $width_quarante;
+  text-align: $text_align;
+  div{
+    @extend %width_cent;
+    img {
+      width: $width_quarante;
+    }
+  }
+}
+
+%fond_point{
+  background: repeat url("../svg/points.svg");
+  color: $gris;
+  margin: 10px;
+}
+
+%article {
+  padding: 10px 5px 25px 15px;
+  margin-bottom: 20px;
+  h1 {
+    font-family: Anton;
+  }
+  .flex_article {
+    .photo {
+      width: 80%;
+      img {
+        @extend %width_cent
+      }
+    }
+    .text {
+      h2, p {
+        padding-left: 25px;
+        font-family: Lato;
+      }
+    }
+  }
+}

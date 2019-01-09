@@ -1,0 +1,187 @@
+header{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .logo_desktop{
+    display: none;
+  }
+  .logo_header{
+    width: 50%;
+    display: inline-block;
+    img{
+      @extend %width_cent;
+    }
+  }
+  .topnav {
+    .menuBurger{
+      display: none;
+    }
+    a {
+      text-decoration: none;
+      background-color: $vert;
+      color: $white;
+
+    }
+    .lien_menu{
+      display: block;
+      text-align: center;
+      border-bottom: $white 2px solid;
+      div{
+        margin-left: auto;
+        margin-right: auto;
+        width: 75px;
+        background-color: $jaune;
+      }
+    }
+    .icon{
+      margin-left: 40%;
+    }
+  }
+}
+
+.premiere_partie {
+  padding-bottom: 50px;
+  .premiere_image {
+    @extend %width_cent;
+    img {
+      @extend %width_cent;
+    }
+  }
+  .deuxieme_image {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      @extend %width_cent;
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+    }
+  }
+  .slogan {
+    font-family: Anton;
+    font-size: 15px;
+    text-align: $text_align;
+    color: $jaune;
+    h1{
+      margin-bottom:0;
+    }
+    h3 {
+      margin-top: 0;
+    }
+  }
+  .flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @extend %width_cent;
+    font-family: LatoB;
+    font-size: 10px;
+    .marron{
+      color: $marron;
+      @extend %icone_flex;
+    }
+    .vert{
+      color: $vert;
+      @extend %icone_flex;
+    }
+    .bleu{
+      color: $bleu;
+      @extend %icone_flex;
+    }
+    .jaune{
+      color: $jaune;
+      @extend %icone_flex;
+    }
+  }
+  .fond_point{
+    @extend %fond_point;
+    h3 {
+      padding-top: 20px;
+      text-align: $text_align;
+      font-family: LatoB;
+      font-size: 20px;
+    }
+    div {
+      p, ul {
+        font-family: Lato;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+    }
+  }
+  .fond_gris {
+    background-color: $gris;
+    border-radius: 25px;
+    margin-right: 15px;
+    margin-left: 15px;
+    text-align: $text_align;
+    color: $white;
+    h3 {
+      font-family: LatoB;
+      font-size: 20px;
+      padding-top: 50px;
+    }
+  }
+  .bouton_jaune{
+    font-family: LatoB;
+    background-color: $jaune;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border-radius: 25px;
+    font-size: 25px;
+  }
+}
+
+.deuxieme_partie {
+  background-color: $jaune;
+  color: $white;
+  @extend %article;
+}
+
+.troisieme_partie {
+  background-color: $vert;
+  color: $gris;
+  @extend %article;
+}
+
+.quatrieme_partie {
+  @extend %fond_point;
+  @extend %article;
+  button {
+    background-color: $gris;
+    border-radius: 25px;
+    margin-right: 15px;
+    margin-left: 15px;
+    text-align: $text_align;
+    color: $white;
+    font-family: LatoB;
+    font-size: 20px;
+  }
+}
+
+.cinquieme_partie {
+  background-color: $beige;
+  color: $gris;
+  @extend %article;
+}
+
+footer {
+  background-color: $gris;
+  color: $white;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  .flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .img {
+    width: 15%;
+    img {
+      @extend %width_cent;
+    }
+  }
+}
